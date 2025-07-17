@@ -6,8 +6,7 @@ export default defineConfig({
   integrations: [tailwind()],
   server: {
     allowedHosts: [
-      'hunting-dealtime-insurance-bean.trycloudflare.com',
-      // Puedes agregar más hosts aquí si es necesario
+      'shortly-pacific-told-admissions.trycloudflare.com',
     ]
   }
 });

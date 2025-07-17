@@ -1,0 +1,94 @@
+<section id="contacto" class="py-24 md:py-36">
+  <div class="contenedor flex flex-col items-center justify-center gap-8">
+    <h2 class="text-2xl min-[450px]:text-3xl lg:text-4xl font-semibold">
+      Contacto
+    </h2>
+    <form novalidate class="flex flex-col w-full h-full max-w-[640px] gap-4 px-4 py-4 sm:px-10 sm:py-10 bg-[#FDFDFD90]">
+        <h3 class="text-xl py-2 font-medium">Escribime un mensaje</h3>
+      <div class="flex flex-col">
+        <input
+          class="p-3 focus:outline-none focus:border focus:border-hoverHeader border"
+          type="text"
+          name="nombre"
+          placeholder="Nombre"
+          required
+        />
+      </div>
+      <div class="flex flex-col">
+        <input
+          class="p-3 focus:outline-none focus:border focus:border-hoverHeader border"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        
+      </div>
+      <div class="flex flex-col">
+        <input
+          class="p-3 focus:outline-none focus:border focus:border-hoverHeader border"
+          type="number"
+          name="telefono"
+          placeholder="Teléfono"
+          required
+        />
+      </div>
+      <div class="flex flex-col">
+        <input
+          class="p-3 focus:outline-none focus:border focus:border-hoverHeader border"
+          type="text"
+          name="asunto"
+          placeholder="Asunto"
+          required
+        />
+      </div>
+      <div class="flex flex-col">
+        <textarea class="p-3 focus:outline-none focus:border focus:border-hoverHeader border" name="mensaje" placeholder="Mensaje" required
+        ></textarea>
+      </div>
+      <button type="submit" class="mb-2 bg-hoverHeader hover:bg-[#176081] transition-all duration-300 ease-in-out p-3 text-claro">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  #contacto {
+    background: linear-gradient(to bottom, #f0efee, #e4e2e0);
+  }
+</style>
+
+<script is:inline>
+  const form = document.querySelector("#contacto form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    form.querySelectorAll(".error-msg").forEach((el) => el.remove());
+    form.querySelectorAll("input, textarea").forEach((field) => {
+      field.classList.remove("border-red-500", "border");
+    });
+
+    let valid = true;
+
+    form.querySelectorAll("input, textarea").forEach((field) => {
+      if (!field.checkValidity()) {
+        valid = false;
+
+        const msg = document.createElement("p");
+        if (field.validity.valueMissing) {
+          msg.textContent = "Este campo es obligatorio.";
+        } else if (field.type === "email" && field.validity.typeMismatch) {
+          msg.textContent = "Ingresá un correo válido.";
+        }
+
+        msg.className = "error-msg text-sm text-red-500 mt-1";
+        field.classList.add("border", "border-red-500");
+        field.insertAdjacentElement("afterend", msg);
+      }
+    });
+
+    if (valid) {
+      console.log("Formulario válido. Enviar...");
+    }
+  });
+</script>
