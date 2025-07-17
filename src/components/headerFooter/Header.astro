@@ -1,0 +1,225 @@
+<div
+  id="overlay"
+  class="fixed top-0 left-0 w-screen h-screen bg-oscuro opacity-0 transition-all duration-300 ease-in-out pointer-events-none z-40 block lg:hidden"
+>
+</div>
+<header id="nav-menu" class="bg-claro w-full h-[70px] z-50 sticky top-0 text-oscuro shadow-lg">
+  <nav
+    class="contenedor flex w-full lg:w-max h-full items-center gap-14 justify-center relative"
+  >
+    <div id="navigation" class="absolute right-[20px] flex lg:hidden">
+      <input
+        type="checkbox"
+        id="hamburger-toggle"
+        aria-label="hamburger"
+        aria-controls="menu"
+        aria-expanded="false"
+      />
+      <label for="hamburger-toggle" id="hamburger" aria-hidden="true">
+        <span class="slice"></span>
+        <span class="slice"></span>
+        <span class="slice"></span>
+      </label>
+    </div>
+    <a href="/#" class="group">
+    </a>
+    <ul
+      id="lista"
+      class="fixed lista bg-claro lg:bg-transparent lg:relative top-[70px] lg:top-0 p-10 lg:p-0 right-0 w-80 flex flex-col lg:flex-row lg:gap-10 lg:w-full h-[calc(100dvh-70px)] lg:h-full lg:items-center text-lg lg:text-base -z-10 lg:z-10 max-[1024px]:overflow-y-auto"
+    >
+      <li class="max-[1024px]:w-full max-[1024px]:flex">
+        <a
+          data-i18n-header-home
+          href="/#"
+          class="hover:text-hoverHeader font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
+          >Servicios</a
+        >
+      </li>
+      <li class="max-[1024px]:w-full max-[1024px]:flex">
+        <a 
+        data-i18n-header-quienessomos
+          href="/#about"
+          class="hover:text-hoverHeader font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-t max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
+          >Patologías a tratar</a
+        >
+      </li>
+      <li class="max-[1024px]:w-full max-[1024px]:flex">
+        <a
+        data-i18n-header-trabajaconnosotros
+
+          href="#"
+          class="hover:text-hoverHeader font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
+          >Sistema de trabajo</a
+        >
+      </li>
+      <li class="max-[1024px]:w-full max-[1024px]:flex">
+        <a
+        data-i18n-header-contacto
+
+          href="/#contacto"
+          class="hover:text-hoverHeader font-medium transition-all duration-300 ease-in-out max-[1024px]:py-6 max-[1024px]:border-b max-[1024px]:w-full max-[1024px]:border-claro"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+    
+  </nav>
+    
+</header>
+
+<style>
+  #nav-menu {
+    transition: top 0.3s ease-in-out;
+  }
+  #menu {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+  }
+  #hamburger-toggle {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  #hamburger {
+    display: block;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: clamp(16px, 10vmin, 32px);
+    height: clamp(16px, 10vmin, 32px);
+    box-sizing: content-box;
+    transition: transform 0.2s ease;
+  }
+  #hamburger .slice {
+    --slice-height: 2px;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: var(--slice-height, 2px);
+    border-radius: var(--slice-height);
+    transition: all 0.2s ease;
+    background-color: #121212;
+    opacity: 90%;
+  }
+  #hamburger .slice {
+    margin-top: 22%; /* Fallback to produce something hamburger-ish if calc is not available */
+    margin-top: calc(33% - var(--slice-height));
+    top: calc((33% - var(--slice-height)) / -2);
+  }
+
+  #hamburger-toggle:checked ~ #menu {
+    visibility: visible;
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  #hamburger-toggle:checked ~ #hamburger .slice:nth-child(1) {
+    top: calc(50% - 33% + var(--slice-height) / 2);
+    transform: rotate(45deg);
+  }
+  #hamburger-toggle:checked ~ #hamburger .slice:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-toggle:checked ~ #hamburger .slice:nth-child(3) {
+    top: calc(-50% + var(--slice-height) / 2);
+    transform: rotate(-45deg);
+  }
+
+  #lang-toggle{
+    background-size: 0.9rem;
+  }
+
+  @media (width < 1024px) {
+    .lista {
+      transform: translateX(320px);
+      transition: transform 0.3s ease-in-out;
+    }
+    .open {
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<script>
+  const nav = document.getElementById("navigation") as HTMLElement | null;
+  const hamburger = document.getElementById(
+    "hamburger-toggle"
+  ) as HTMLInputElement | null;
+  const menu = document.getElementById("menu") as HTMLElement | null;
+
+  if (nav && hamburger && menu) {
+    const updateHamburgerARIA = () => {
+      hamburger.setAttribute(
+        "aria-expanded",
+        hamburger.checked ? "true" : "false"
+      );
+      menu.setAttribute("aria-hidden", !hamburger.checked ? "true" : "false");
+    };
+
+    hamburger.addEventListener("change", updateHamburgerARIA);
+
+    window.addEventListener("click", (event: MouseEvent) => {
+      const eventPath = event.composedPath() as EventTarget[];
+      const isTargeted = eventPath.includes(nav);
+      if (!isTargeted) {
+        hamburger.checked = false;
+        updateHamburgerARIA();
+      }
+    });
+  }
+
+  const overlay = document.getElementById("overlay") as HTMLElement | null;
+  const anchors = document.querySelectorAll(
+    "#lista a"
+  ) as NodeListOf<HTMLAnchorElement>;
+
+  const abrirMenu = () => {
+    const lista = document.getElementById("lista") as HTMLElement | null;
+
+    lista.classList.toggle("open");
+    overlay.classList.toggle("opacity-0");
+    overlay.classList.toggle("opacity-50");
+    overlay.classList.toggle("pointer-events-none");
+    document.body.classList.toggle("overflow-y-hidden");
+  };
+
+  overlay.addEventListener("click", () => {
+    const checkbox = document.getElementById(
+      "hamburger-toggle"
+    ) as HTMLInputElement;
+    checkbox.checked = false;
+    abrirMenu();
+  });
+
+  anchors.forEach((a) =>
+    a.addEventListener("click", () => {
+      if (window.innerWidth < 1024) {
+        const checkbox = document.getElementById(
+          "hamburger-toggle"
+        ) as HTMLInputElement;
+        checkbox.checked = false;
+        abrirMenu();
+      }
+    })
+  );
+
+  hamburger.addEventListener("change", abrirMenu);
+
+  let lastScrollTop = 0;
+  const header = document.getElementById("nav-menu");
+
+  window.addEventListener("scroll", function () {
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > lastScrollTop) {
+      header.style.top = "-70px";
+    } else {
+      header.style.top = "0";
+    }
+
+    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+  });
+
+</script>
