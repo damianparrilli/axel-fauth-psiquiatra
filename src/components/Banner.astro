@@ -1,30 +1,177 @@
 <section
-  class="w-full px-[20px] h-[calc(98svh-70px)] flex justify-center items-center relative before:bg-[url(/bg-banner.webp)] before:bg-cover before:opacity-20 before:-z-10 before:h-full before:w-full before:absolute before:left-0 before:top-0 before:content-[''] after:bg-[#325E73] after:-z-20 after:h-full after:w-full after:absolute after:left-0 after:top-0 after:content-[''] overflow-hidden text-claro"
+  class="w-full px-[20px] h-[calc(98svh-70px)] flex flex-col justify-center items-center relative before:bg-[url(/bg-banner-.webp)] before:bg-fixed before:bg-cover before:opacity-20 before:-z-10 before:h-full before:w-full before:absolute before:left-0 before:top-0 before:content-[''] after:bg-[#325E73] dark:after:bg-[#09212C] after:-z-20 after:h-full after:w-full after:absolute after:left-0 after:top-0 after:content-[''] overflow-hidden text-claro"
 >
-  <div
-    class="contenedor flex flex-col items-start justify-center w-full h-full"
+  <button
+    id="prevBtn"
+    aria-label="Slide anterior"
+    class="absolute top-1/2 left-5 -translate-y-1/2   group rounded-full w-9 h-9 flex items-center justify-center cursor-pointer z-30"
   >
-  <div class="flex flex-col w-full max-w-[700px] gap-4">
-    <h1
-      class="text-3xl min-[450px]:text-4xl lg:text-5xl font-bold leading-[1.5]"
-    >
-      Cuidar tu mente también es un acto de fe
-    </h1>
-    <p>
-      Más de 20 años de experiencia ayudando a adolescentes, adultos y adultos
-      mayores a recuperar su bienestar emocional.
-    </p>
-    <p>
-      Te ofrezco acompañamiento profesional para entender lo que te pasa y
-      ayudarte a mejorar. Sesiones online, con diagnóstico claro y tratamiento
-      efectivo.
-    </p>
-    </div>
+    <svg class="w-8 h-8 text-claro dark:text-claro" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
+</svg>
 
-    <a
+  </button>
+  <button
+    id="nextBtn"
+    aria-label="Slide siguiente"
+    class="absolute top-1/2 right-5 -translate-y-1/2 group rounded-full w-9 h-9 flex items-center justify-center cursor-pointer z-30"
+  >
+    <svg class="w-8 h-8 text-claro dark:text-claro group-hover:text-[#fdfdfde5] dark:group-hover:text-[#fdfdfde5] transition-all duration-300 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+</svg>
+
+  </button>
+  <div
+    class="contenedor flex flex-col items-center justify-center w-full h-full max-w-[700px]"
+  >
+    <div class="w-full h-full relative">
+      <div class="siema h-full text-lg leading-relaxed text-center">
+        <div>
+          <h1
+            class="text-2xl min-[450px]:text-4xl lg:text-5xl font-bold leading-[1.5] mb-6"
+          >
+            Cuidar tu mente también es un acto de fe
+          </h1>
+          <p class="text-sm sm:text-base">
+            Más de 20 años de experiencia ayudando a adolescentes, adultos y
+            adultos mayores a recuperar su bienestar emocional
+          </p>
+          <a
       href="#contacto"
-      class="absolute bottom-[15svh] md:bottom-[25%] font-medium bg-acento text-oscuro px-7 py-2 text-base sm:text-lg cursor-pointer z-10 bg-claro hover:bg-hoverClaro transition-all duration-300 ease-in-out"
+      class="font-medium text-oscuro px-7 py-2 text-base sm:text-lg cursor-pointer z-10 bg-claro dark:bg-botonDark dark:text-claro dark:hover:bg-[#2178a0] hover:bg-hoverClaro transition-all duration-300 ease-in-out mt-10"
       >Contactar</a
     >
+        </div>
+        <div>
+          <h1
+            class="text-2xl min-[450px]:text-4xl lg:text-5xl font-bold leading-[1.5] mb-6"
+          >
+            A veces, el primer paso es pedir ayuda
+          </h1>
+          <p class="text-sm sm:text-base">
+            Estoy para escucharte, orientarte y ayudarte a recuperar tu equilibrio emocional, con atención psiquiátrica profesional y cercana, 100% online          </p>
+          <a
+      href="#contacto"
+      class="font-medium text-oscuro px-7 py-2 text-base sm:text-lg cursor-pointer z-10 bg-claro dark:bg-botonDark dark:text-claro dark:hover:bg-[#2178a0] hover:bg-hoverClaro transition-all duration-300 ease-in-out mt-10"
+      >Contactar</a
+    >
+        </div>
+        <div>
+          <h1
+            class="text-2xl min-[450px]:text-4xl lg:text-5xl font-bold leading-[1.5] mb-6"
+          >
+            Escuchar lo que sentís también es parte del tratamiento
+          </h1>
+          <p class="text-sm sm:text-base">
+            Trabajo desde una mirada integral, respetuosa y humana para acompañarte en tu proceso de bienestar mental
+          </p>
+          <a
+      href="#contacto"
+      class="font-medium text-oscuro px-7 py-2 text-base sm:text-lg cursor-pointer z-10 bg-claro dark:bg-botonDark dark:text-claro dark:hover:bg-[#2178a0] hover:bg-hoverClaro transition-all duration-300 ease-in-out mt-10"
+      >Contactar</a
+    >
+        </div>
+      </div>
+
+      
+
   </div>
+  <div
+        id="dots"
+        class="flex gap-3 justify-center z-20 absolute bottom-6"
+        aria-label="Indicadores del slider"
+      >
+        <button
+          class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer transition-all"
+          aria-label="Ir al slide 1"></button>
+        <button
+          class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer transition-all"
+          aria-label="Ir al slide 2"></button>
+        <button
+          class="dot w-3 h-3 rounded-full bg-gray-400 cursor-pointer transition-all"
+          aria-label="Ir al slide 3"></button>
+      </div>
+    </div>
 </section>
+
+<style>
+  .siema  div{
+    height: calc(98svh - 70px);
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+  }
+
+  .dot:not(.bg-white):hover {
+  background-color: #ffffffb3;
+}
+
+</style>
+
+<script src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // @ts-ignore
+    const slider = new Siema({
+      duration: 400,
+      loop: true,
+    });
+
+    const dots = document.querySelectorAll(".dot");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    let current = 0;
+    let autoplayInterval;
+
+    function updateDots(index) {
+      dots[current].classList.remove("bg-white");
+      dots[current].classList.add("bg-gray-400");
+      dots[index].classList.add("bg-white");
+      dots[index].classList.remove("bg-gray-400");
+      current = index;
+    }
+
+    function startAutoplay() {
+      autoplayInterval = setInterval(() => {
+        const nextIndex = (current + 1) % dots.length;
+        slider.next();
+        updateDots(nextIndex);
+      }, 4000);
+    }
+
+    function resetAutoplay() {
+      clearInterval(autoplayInterval);
+      startAutoplay();
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        slider.goTo(i);
+        updateDots(i);
+        resetAutoplay();
+      });
+    });
+
+    prevBtn.addEventListener("click", () => {
+      slider.prev();
+      const prevIndex = (current - 1 + dots.length) % dots.length;
+      updateDots(prevIndex);
+      resetAutoplay();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      slider.next();
+      const nextIndex = (current + 1) % dots.length;
+      updateDots(nextIndex);
+      resetAutoplay();
+    });
+
+    updateDots(0);
+    startAutoplay();
+  });
+</script>

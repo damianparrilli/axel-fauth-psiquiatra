@@ -13,6 +13,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.11.2",
     "preline": "^2.5.1",
+    "siema": "^1.5.1",
     "tailwindcss": "^3.4.17",
     "taos": "^1.0.5"
   }

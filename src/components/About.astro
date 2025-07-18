@@ -1,0 +1,69 @@
+<section id="sobremi" class="py-24 md:py-36 relative bg-[url(/rosario.png)] dark:bg-[url(/rosario.png)] bg-no-repeat">
+  <div class="contenedor flex flex-col items-center justify-center gap-12">
+    <h2
+      class="text-2xl min-[450px]:text-3xl lg:text-4xl font-semibold [animation-iteration-count:infinite] delay-[250ms] duration-[500ms] taos:translate-y-[-100px] taos:opacity-0"
+      data-taos-offset="0"
+    >
+      Sobre mi
+    </h2>
+    <div class="flex flex-col md:flex-row items-stretch justify-center gap-8 max-w-[1000px] mx-auto [animation-iteration-count:infinite] delay-[250ms] duration-[500ms] taos:translate-y-[200px] taos:opacity-0"
+      data-taos-offset="0">
+      <div class="w-full md:w-1/2">
+        <img
+          src="1553096285600.jpeg"
+          alt=""
+          class="object-cover w-full"
+        />
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col gap-2 justify-center">
+        <p>
+          Soy el Dr. Axel Faut, médico psiquiatra con más de 20 años de
+          experiencia ayudando a personas a recuperar su equilibrio emocional y
+          su bienestar mental.
+        </p>
+        <p>
+          Trabajo 100% de forma online, lo que me permite atender a pacientes de
+          toda la Argentina, brindando una atención cálida, cercana y efectiva.
+        </p>
+        <p>
+          Mi formación médica está atravesada también por una mirada integral
+          del ser humano, inspirada en valores humanistas. 
+        </p>
+        <p>
+         Te invito a dar el primer paso. Estoy acá para ayudarte.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+    #sobremi{
+        background-size: 25%;
+        background-position: bottom -200px left -50px;
+    }
+
+  #sobremi::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom, #f0efee, #e4e2e0);
+  pointer-events: none;
+  opacity: 1;
+}
+
+html.dark #sobremi::before {
+  background: linear-gradient(to bottom, #0d2c3a, #0a2f41);
+}
+
+@media (max-width: 768px) {
+  #sobremi {
+    background-size: 50%;
+    background-position: top 15% left -150px ;
+  }
+}
+</style>

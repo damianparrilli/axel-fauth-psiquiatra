@@ -2,7 +2,7 @@
   <div
     class="contenedor flex flex-col items-center justify-center gap-12 text-claro bg-linear-to-r from-black to-blue-500"
   >
-    <h2 class="text-2xl min-[450px]:text-3xl lg:text-4xl font-semibold [animation-iteration-count:infinite] delay-[250ms] duration-[500ms] taos:translate-y-[-200px] taos:opacity-0" data-taos-offset="0">
+    <h2 class="text-2xl min-[450px]:text-3xl lg:text-4xl font-semibold [animation-iteration-count:infinite] delay-[250ms] duration-[500ms] taos:translate-y-[-100px] taos:opacity-0" data-taos-offset="0">
       ¿Qué problemáticas atiendo?
     </h2>
     <div class="flex max-w-[1200px] justify-center items-stretch flex-wrap gap-6 w-full h-full">
@@ -166,7 +166,7 @@
     </div>
     <a
       href="#contacto"
-      class="font-medium bg-acento text-oscuro px-8 py-4 text-base sm:text-lg cursor-pointer z-10 bg-claro hover:bg-hoverClaro transition-all duration-300 ease-in-out [animation-iteration-count:infinite] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="-100"
+      class="font-medium text-oscuro px-8 py-4 text-base sm:text-lg cursor-pointer z-10 bg-claro hover:bg-hoverClaro transition-all duration-300 ease-in-out dark:bg-botonDark dark:text-claro dark:hover:bg-[#2178a0] [animation-iteration-count:infinite] taos:translate-y-[200px] taos:opacity-0" data-taos-offset="-100"
       >Contactar</a
     >
   </div>
@@ -175,5 +175,9 @@
 <style>
   #patologias {
     background: linear-gradient(to right, #3a677c, #5495b1);
+  }
+
+  html.dark #patologias{
+    background: linear-gradient(to right, #0A1D26, #0D2C3A);
   }
 </style>

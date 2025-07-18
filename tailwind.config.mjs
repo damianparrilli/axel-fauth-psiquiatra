@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+	darkMode: 'class',
 	content: {
 	  files: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}', './node_modules/preline/dist/*.js'],
 	  relative: true,
@@ -10,17 +11,18 @@ export default {
 		  colors: {
 			claro: '#FDFDFD',
 			oscuro: '#121212',
-			azulInicio: '#3A677C',
-			azulFinal: '#5495B1',
 			hoverClaro: '#dfdfdf',
 			hoverHeader: '#15668C',
 			problematicas: '#428BA820',
 			bgBody: '#F0F5F9',
+			bgBodyDark: '#233442',
+			hoverHeaderDark: '#6BCCF9',
+			botonDark: '#2586B3',
+			acento: '#2586B3',
 		  },
 		},
 	  },
 	plugins: [
-	  require('preline/plugin'),
 	  require('taos/plugin'),
 	],
 	safelist: [
