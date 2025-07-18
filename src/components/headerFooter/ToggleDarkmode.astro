@@ -16,6 +16,14 @@
   </span>
 </button>
 
+<style is:global>
+  html.disable-transitions *,
+  html.disable-transitions *::before,
+  html.disable-transitions *::after {
+    transition: none !important;
+  }
+</style>
+
 <script>
   const html = document.documentElement;
   const button = document.getElementById("toggle-dark");
@@ -28,7 +36,11 @@
   }
 
   button.addEventListener("click", () => {
+    html.classList.add("disable-transitions");
     const isDark = html.classList.toggle("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
+    setTimeout(() => {
+      html.classList.remove("disable-transitions");
+    }, 100);
   });
 </script>
