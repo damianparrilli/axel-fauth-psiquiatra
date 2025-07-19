@@ -99,7 +99,7 @@ const { title, description, keywords } = Astro.props;
   }
 
   html {
-    /* scrollbar-gutter: stable; */
+    scrollbar-gutter: stable;
     text-wrap: pretty;
     font-family: "IBM Plex Sans", sans-serif;
   }
@@ -115,4 +115,35 @@ const { title, description, keywords } = Astro.props;
     margin: 0 auto;
     padding: 0 20px;
   }
+  
+html:not(.dark) ::-webkit-scrollbar {
+  width: 10px;
+}
+html:not(.dark) ::-webkit-scrollbar-track {
+  background-color: #FDFDFD;
+}
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background-color: #15668C;
+  border-radius: 4px;
+}
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background-color: #176081;
+}
+
+html.dark ::-webkit-scrollbar {
+  width: 10px;
+}
+html.dark ::-webkit-scrollbar-track {
+  background-color: #21313F;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: #2586B3;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: #2178a0;
+}
+
+
+
 </style>
