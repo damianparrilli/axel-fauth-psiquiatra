@@ -4,110 +4,119 @@
       Contacto
     </h2>
     <div
-      class="flex flex-col md:flex-row gap-12 w-full justify-stretch max-w-[1280px] mx-auto items-stretch"
+      class="flex flex-col md:flex-row gap-20 md:gap-12 w-full justify-stretch max-w-[1280px] mx-auto items-stretch"
     >
-      <form
-        novalidate
-        class="flex flex-col w-full h-full mg:max-w-[640px] gap-4 px-4 py-4 sm:px-10 sm:py-10 bg-[#FDFDFD90] dark:bg-[#12121230] border border-transparent dark:hover:border-[#6bccf960] hover:border-[#15668c60] transition-all duration-300 ease-in-out"
+      
+      <div class="flex flex-col gap-20 md:gap-12 w-full md:w-1/2">
+        <div class="flex w-full flex-col gap-4 items-center md:items-start">
+          <h3 class="w-full text-xl font-medium">¿Querés hablar conmigo?</h3>
+          <div>
+          <p>Podés escribirme por WhatsApp para coordinar una llamada en el momento que mejor se adapte a vos.</p>
+          <p>Estoy disponible para escucharte y ofrecerte el acompañamiento profesional que necesites, de forma confidencial y online.</p>
+          </div>
+          <a
+
+          href="https://wa.me/5491166613741" target="_blank"
+          class="bg-hoverHeader flex gap-2 font-medium w-max hover:bg-[#176081] dark:bg-botonDark dark:text-claro dark:hover:bg-[#2178a0] transition-all duration-300 ease-in-out px-6 py-3 text-claro text-center"
+          >
+          <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-auto h-6 fill-claro"
+        viewBox="0 0 24 24"
       >
-        <h3 class="text-xl py-2 font-medium">Escribime un mensaje</h3>
-        <div class="flex flex-col">
-          <input
-            class="p-3 focus:outline-none focus:border focus:border-hoverHeader dark:focus:border-hoverHeaderDark border"
-            type="text"
-            name="nombre"
-            placeholder="Nombre"
-            required
-          />
-        </div>
-        <div class="flex flex-col">
-          <input
-            class="p-3 focus:outline-none focus:border focus:border-hoverHeader dark:focus:border-hoverHeaderDark border"
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-        </div>
-        <div class="flex flex-col">
-          <input
-            class="p-3 focus:outline-none focus:border focus:border-hoverHeader dark:focus:border-hoverHeaderDark border"
-            type="number"
-            name="telefono"
-            placeholder="Teléfono"
-            required
-          />
-        </div>
-        <div class="flex flex-col">
-          <input
-            class="p-3 focus:outline-none focus:border focus:border-hoverHeader dark:focus:border-hoverHeaderDark border"
-            type="text"
-            name="asunto"
-            placeholder="Asunto"
-            required
-          />
-        </div>
-        <div class="flex flex-col">
-          <textarea
-            class="p-3 focus:outline-none focus:border focus:border-hoverHeader dark:focus:border-hoverHeaderDark border"
-            name="mensaje"
-            placeholder="Mensaje"
-            required></textarea>
-        </div>
-        <button
-          type="submit"
-          class="mb-2 bg-hoverHeader hover:bg-[#176081] dark:bg-botonDark dark:text-claro dark:hover:bg-[#2178a0] transition-all duration-300 ease-in-out p-3 text-claro"
-          >Enviar</button
+        <path
+          d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"
+        ></path>
+      </svg>
+          Enviar mensaje</a
         >
-      </form>
-      <div class="flex flex-col gap-4 w-full">
-        <h3 class="text-xl font-medium">Datos de contacto</h3>
-        <div class="flex gap-2 justify-between">
-          <p class="flex items-center gap-3 w-max sm:w-1/2 md:w-max lg:w-1/2">
-            <svg class="w-5 h-auto shrink-0 fill-oscuro dark:fill-claro" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 16V0H20V16H0ZM10 9L2 4V14H18V4L10 9ZM10 7L18 2H2L10 7ZM2 4V2V14V4Z"/>
-</svg>
-            axelfaut@gmail.com
-          </p>
-          <p class="flex items-center gap-3 w-max sm:w-1/2 md:w-max lg:w-1/2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-5 h-auto fill-oscuro dark:fill-claro"
-            viewBox="0 0 50 50"
-          >
-            <path
-              d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z"
-            ></path>
-          </svg>axel.faut
-        </p>
+      </li>
         </div>
-        <div class="flex gap-2 mb-6 justify-between">
-        <p class="flex items-center gap-3 w-max sm:w-1/2 md:w-max lg:w-1/2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-auto fill-oscuro dark:fill-claro"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"
-              ></path>
-            </svg>+54 11 6043-2345
-          </p>
-        <p class="flex items-center gap-3 w-max sm:w-1/2 md:w-max lg:w-1/2">
+        <div class="w-full flex flex-col gap-4">
+          <h3 class="text-xl font-medium">Datos de contacto</h3>
+          <div class="flex gap-2 justify-between">
+            <p class="flex items-center gap-3 w-max sm:w-1/2 md:w-max lg:w-1/2">
+              <svg
+                class="w-5 h-auto shrink-0 fill-oscuro dark:fill-claro"
+                viewBox="0 0 20 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 16V0H20V16H0ZM10 9L2 4V14H18V4L10 9ZM10 7L18 2H2L10 7ZM2 4V2V14V4Z"
+                ></path>
+              </svg>
+              axelfaut29@gmail.com
+            </p>
+            <p class="flex items-center gap-3 w-max sm:w-1/2 md:w-max lg:w-1/2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-auto fill-oscuro dark:fill-claro"
+                viewBox="0 0 50 50"
+              >
+                <path
+                  d="M32,11h5c0.552,0,1-0.448,1-1V3.263c0-0.524-0.403-0.96-0.925-0.997C35.484,2.153,32.376,2,30.141,2C24,2,20,5.68,20,12.368 V19h-7c-0.552,0-1,0.448-1,1v7c0,0.552,0.448,1,1,1h7v19c0,0.552,0.448,1,1,1h7c0.552,0,1-0.448,1-1V28h7.222 c0.51,0,0.938-0.383,0.994-0.89l0.778-7C38.06,19.518,37.596,19,37,19h-8v-5C29,12.343,30.343,11,32,11z"
+                ></path>
+              </svg>axel.fauth.5
+            </p>
+          </div>
+          <div class="flex gap-2 justify-between">
+            <p class="flex items-center gap-3 w-max sm:w-1/2 md:w-max lg:w-1/2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-auto fill-oscuro dark:fill-claro"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"
+                ></path>
+              </svg>+54 9 11 6661-3741
+            </p>
+            <p class="flex items-center gap-3 w-max sm:w-1/2 md:w-max lg:w-1/2">
+              <svg
+                class="w-5 h-auto fill-oscuro dark:fill-claro"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M4.19534 2.65865C4.19506 3.21499 3.97379 3.74843 3.5802 4.14162C3.18662 4.53482 2.65296 4.75555 2.09662 4.75528C1.54028 4.755 1.00684 4.53373 0.613652 4.14014C0.220459 3.74655 -0.000277906 3.21289 2.62588e-07 2.65656C0.000278431 2.10022 0.221549 1.56678 0.615135 1.17359C1.00872 0.780395 1.54238 0.559659 2.09872 0.559937C2.65505 0.560215 3.18849 0.781485 3.58169 1.17507C3.97488 1.56866 4.19562 2.10232 4.19534 2.65865ZM4.25827 6.3086H0.0629303V19.44H4.25827V6.3086ZM10.8869 6.3086H6.71254V19.44H10.8449V12.5492C10.8449 8.71043 15.8479 8.35383 15.8479 12.5492V19.44H19.9908V11.1228C19.9908 4.65144 12.586 4.89267 10.8449 8.07064L10.8869 6.3086Z"
+                ></path>
+              </svg>faut.axel
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col gap-4">
+        <h3 class="text-xl font-medium">Visita el consultorio</h3>
+        <p class="flex items-center gap-2">
           <svg
-            class="w-5 h-auto fill-oscuro dark:fill-claro"
+            class="w-5 h-auto shrink-0 text-oscuro dark:text-claro"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
+            viewBox="0 0 24 24"
           >
             <path
-              d="M4.19534 2.65865C4.19506 3.21499 3.97379 3.74843 3.5802 4.14162C3.18662 4.53482 2.65296 4.75555 2.09662 4.75528C1.54028 4.755 1.00684 4.53373 0.613652 4.14014C0.220459 3.74655 -0.000277906 3.21289 2.62588e-07 2.65656C0.000278431 2.10022 0.221549 1.56678 0.615135 1.17359C1.00872 0.780395 1.54238 0.559659 2.09872 0.559937C2.65505 0.560215 3.18849 0.781485 3.58169 1.17507C3.97488 1.56866 4.19562 2.10232 4.19534 2.65865ZM4.25827 6.3086H0.0629303V19.44H4.25827V6.3086ZM10.8869 6.3086H6.71254V19.44H10.8449V12.5492C10.8449 8.71043 15.8479 8.35383 15.8479 12.5492V19.44H19.9908V11.1228C19.9908 4.65144 12.586 4.89267 10.8449 8.07064L10.8869 6.3086Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"
             ></path>
-          </svg>faut.axel
+          </svg>
+          Clínica IMSA. Comandante Andresito y Av San Martin, Puerto Rico, Misiones
         </p>
-        </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d421264.8469305887!2d-58.62247888409621!3d-34.42341178426538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1752793299914!5m2!1ses!2sar"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.003619577561!2d-55.02816692384544!3d-26.808013376709866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f8271795b11817%3A0xcf94c58a883f760e!2sInstituto%20M%C3%A9dico%20Sociedad%20An%C3%B3nima%20imsa!5e0!3m2!1ses!2sar!4v1753030069996!5m2!1ses!2sar"
           class="w-full h-96 md:h-full"
           style="border:0;"
           allowfullscreen=""
@@ -126,50 +135,4 @@
   html.dark #contacto {
     background: linear-gradient(to bottom, #0d2c3a, #0a2f41);
   }
-
-  html.dark input,
-  html.dark textarea {
-    background-color: #152632;
-  }
-
-  html.dark input::placeholder,
-  html.dark textarea::placeholder {
-    color: #bcbebe;
-  }
 </style>
-
-<script is:inline>
-  const form = document.querySelector("#contacto form");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    form.querySelectorAll(".error-msg").forEach((el) => el.remove());
-    form.querySelectorAll("input, textarea").forEach((field) => {
-      field.classList.remove("border-red-500", "border");
-    });
-
-    let valid = true;
-
-    form.querySelectorAll("input, textarea").forEach((field) => {
-      if (!field.checkValidity()) {
-        valid = false;
-
-        const msg = document.createElement("p");
-        if (field.validity.valueMissing) {
-          msg.textContent = "Este campo es obligatorio.";
-        } else if (field.type === "email" && field.validity.typeMismatch) {
-          msg.textContent = "Ingresá un correo válido.";
-        }
-
-        msg.className = "error-msg text-sm text-red-500 mt-1";
-        field.classList.add("border", "border-red-500");
-        field.insertAdjacentElement("afterend", msg);
-      }
-    });
-
-    if (valid) {
-      console.log("Formulario válido. Enviar...");
-    }
-  });
-</script>
