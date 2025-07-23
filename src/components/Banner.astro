@@ -136,10 +136,8 @@
   }
 </style>
 
-<script src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    //@ts-ignore
+<script is:inline>
+  requestAnimationFrame(() => {
     const slider = new Siema({
       duration: 500,
       loop: true,

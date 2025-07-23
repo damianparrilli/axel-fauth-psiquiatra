@@ -1,6 +1,7 @@
 ---
 import Header from "../components/headerFooter/Header.astro";
 import Footer from "../components/headerFooter/Footer.astro";
+import FontLoader from "../components/FontLoader.astro";
 interface Props {
   title: string;
   description: string;
@@ -54,12 +55,8 @@ const { title, description, keywords } = Astro.props;
       href="/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="/lib/taos.js" as="script" set:head>
+    
     <title>{title}</title>
     <script>
       (function () {
@@ -76,10 +73,13 @@ const { title, description, keywords } = Astro.props;
     <script is:inline>
       document.documentElement.classList.add("js");
     </script>
+    <script src="/lib/siema.min.js" is:inline></script>
+
   </head>
   <body
     class="overflow-x-hidden bg-bgBody dark:bg-bgBodyDark dark:text-claro text-oscuro theme-init"
   >
+    <FontLoader />
     <Header />
     <slot />
     <Footer />
@@ -98,9 +98,24 @@ const { title, description, keywords } = Astro.props;
       </svg>
     </a>
 
-    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js" is:inline></script>
+    
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    window.requestIdleCallback?.(() => {
+      const taosScript = document.createElement("script");
+      taosScript.src = "/lib/taos.js";
+      taosScript.setAttribute("is", "inline");
+      document.body.appendChild(taosScript);
+    });
+  });
+</script>
+
+
+
   </body>
 </html>
+
+
 <style is:global>
   :root {
   }
