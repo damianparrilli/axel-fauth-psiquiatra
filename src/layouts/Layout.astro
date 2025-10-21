@@ -119,12 +119,17 @@ const { title, description, keywords } = Astro.props;
     
 <script is:inline>
   window.addEventListener("DOMContentLoaded", () => {
-    window.requestIdleCallback?.(() => {
+    const loadTaos = () => {
       const taosScript = document.createElement("script");
       taosScript.src = "/lib/taos.js";
       taosScript.setAttribute("is", "inline");
       document.body.appendChild(taosScript);
-    });
+    };
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(loadTaos);
+    } else {
+      setTimeout(loadTaos, 1);
+    }
   });
 </script>
 
